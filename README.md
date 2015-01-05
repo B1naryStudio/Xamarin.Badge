@@ -3,7 +3,7 @@ Badge Plugin for Xamarin and Windows
 Simple cross platform plugin to work with application badge
 
 ### Setup
-* Available on NuGet: https://www.nuget.org/packages/Xamarin.Plugin.Badge/
+* Available on NuGet: https://www.nuget.org/packages/Xam.Plugin.Badge/
 * Install into your PCL project and Client projects.
 
 **Supports**
