@@ -7,6 +7,6 @@
   {
       void ClearBadge();
 
-      void SetBadge(int badgeNumber);
+      void SetBadge(int badgeNumber, string title = null);
   }
 }

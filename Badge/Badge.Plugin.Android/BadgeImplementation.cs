@@ -1,6 +1,7 @@
+using Android;
+using Android.App;
+using Android.Content;
 using Badge.Plugin.Abstractions;
-using System;
-
 
 namespace Badge.Plugin
 {
@@ -9,14 +10,38 @@ namespace Badge.Plugin
   /// </summary>
   public class BadgeImplementation : IBadge
   {
-      public void ClearBadge()
+      private const int BadgeNotificationId = int.MinValue;
+
+      public void SetBadge(int badgeNumber, string title = null)
       {
-          throw new NotImplementedException();
+          var notificationManager = getNotificationManager();
+          var notification = createNativeNotification(badgeNumber, title ?? string.Format("{0} new messages", badgeNumber));
+
+          notificationManager.Notify(BadgeNotificationId, notification);
       }
 
-      public void SetBadge(int badgeNumber)
+      public void ClearBadge()
       {
-          throw new NotImplementedException();
+          var notificationManager = getNotificationManager();
+          notificationManager.Cancel(BadgeNotificationId);
+      }
+
+      private NotificationManager getNotificationManager()
+      {
+          var notificationManager = Application.Context.GetSystemService(Context.NotificationService) as NotificationManager;
+          return notificationManager;
+      }
+
+      private Notification createNativeNotification(int badgeNumber, string title)
+      {
+          var builder = new Notification.Builder(Application.Context)
+              .SetContentTitle(title)
+              .SetTicker(title)
+              .SetNumber(badgeNumber)
+              .SetSmallIcon(Resource.Drawable.IcDialogEmail);
+
+          var nativeNotification = builder.Build();
+          return nativeNotification;
       }
   }
 }
