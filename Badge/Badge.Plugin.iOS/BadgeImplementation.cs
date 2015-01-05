@@ -17,7 +17,7 @@ namespace Badge.Plugin
           UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
       }
 
-      public void SetBadge(int badgeNumber)
+      public void SetBadge(int badgeNumber, string title = null)
       {
           UIApplication.SharedApplication.ApplicationIconBadgeNumber = badgeNumber;
       }

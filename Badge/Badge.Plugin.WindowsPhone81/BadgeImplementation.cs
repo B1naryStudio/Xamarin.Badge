@@ -1,5 +1,7 @@
 using Badge.Plugin.Abstractions;
 using System;
+using Windows.Data.Xml.Dom;
+using Windows.UI.Notifications;
 
 
 namespace Badge.Plugin
@@ -11,12 +13,17 @@ namespace Badge.Plugin
   {
       public void ClearBadge()
       {
-          throw new NotImplementedException();
+          BadgeUpdateManager.CreateBadgeUpdaterForApplication().Clear();
       }
 
-      public void SetBadge(int badgeNumber)
+      public void SetBadge(int badgeNumber, string title = null)
       {
-          throw new NotImplementedException();
+          var badgeXml = BadgeUpdateManager.GetTemplateContent(BadgeTemplateType.BadgeNumber);
+          var badgeElement = (XmlElement)badgeXml.SelectSingleNode("/badge");
+          badgeElement.SetAttribute("value", badgeNumber.ToString());
+
+          var badge = new BadgeNotification(badgeXml);
+          BadgeUpdateManager.CreateBadgeUpdaterForApplication().Update(badge);
       }
   }
 }

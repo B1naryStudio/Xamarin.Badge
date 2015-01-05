@@ -14,7 +14,7 @@ namespace Badge.Plugin
           throw new NotImplementedException();
       }
 
-      public void SetBadge(int badgeNumber)
+      public void SetBadge(int badgeNumber, string title = null)
       {
           throw new NotImplementedException();
       }
