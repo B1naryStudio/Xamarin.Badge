@@ -1,8 +1,6 @@
-using Badge.Plugin.Abstractions;
-using System;
 using Windows.Data.Xml.Dom;
 using Windows.UI.Notifications;
-
+using Badge.Plugin.Abstractions;
 
 namespace Badge.Plugin
 {
