@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Badge.Plugin.Abstractions
+﻿namespace Badge.Plugin.Abstractions
 {
   /// <summary>
   /// Interface for Badge
@@ -9,6 +7,6 @@ namespace Badge.Plugin.Abstractions
   {
       void ClearBadge();
 
-      void SetBadge();
+      void SetBadge(int badgeNumber);
   }
 }

@@ -9,5 +9,14 @@ namespace Badge.Plugin
   /// </summary>
   public class BadgeImplementation : IBadge
   {
+      public void ClearBadge()
+      {
+          throw new NotImplementedException();
+      }
+
+      public void SetBadge(int badgeNumber)
+      {
+          throw new NotImplementedException();
+      }
   }
 }

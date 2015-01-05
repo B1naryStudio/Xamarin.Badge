@@ -35,10 +35,12 @@
     <DocumentationFile>bin\iPhone\Release\Badge.Plugin.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\Badge.Plugin.iOS\BadgeImplementation.cs">
+      <Link>BadgeImplementation.cs</Link>
+    </Compile>
     <Compile Include="..\Badge.Plugin\CrossBadge.cs">
       <Link>CrossBadge.cs</Link>
     </Compile>
-    <Compile Include="BadgeImplementation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
