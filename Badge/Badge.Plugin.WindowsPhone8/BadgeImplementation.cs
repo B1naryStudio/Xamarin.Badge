@@ -1,6 +1,6 @@
+using System.Linq;
 using Badge.Plugin.Abstractions;
-using System;
-
+using Microsoft.Phone.Shell;
 
 namespace Badge.Plugin
 {
@@ -11,12 +11,21 @@ namespace Badge.Plugin
   {
       public void ClearBadge()
       {
-          throw new NotImplementedException();
+          SetBadge(0);
       }
 
       public void SetBadge(int badgeNumber, string title = null)
       {
-          throw new NotImplementedException();
+          var shellTile = ShellTile.ActiveTiles.First();
+
+          if (shellTile == null) return;
+          
+          var tileData = new StandardTileData
+          {
+              Count = badgeNumber
+          };
+
+          shellTile.Update(tileData);
       }
   }
 }
