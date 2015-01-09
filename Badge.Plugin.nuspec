@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
    <metadata minClientVersion="2.8.1">
-       <id>Xamarin.Plugin.Badge</id>
+       <id>Xam.Plugin.Badge</id>
        <version>1.0.0.0</version>
        <title>Badge Plugin for Xamarin and Windows</title>
        <authors>Saveliy Bondini</authors>
