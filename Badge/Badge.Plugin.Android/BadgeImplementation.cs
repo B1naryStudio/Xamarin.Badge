@@ -1,7 +1,34 @@
-using Android;
+
+using System;
 using Android.App;
-using Android.Content;
 using Badge.Plugin.Abstractions;
+
+/*
+
+<!-- for android -->
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+<uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+
+<!-- Samsung -->
+<uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+<uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
+
+<!-- HTC -->
+<uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+<uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
+
+<!-- Sony -->
+<uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+
+<!--for apex-->
+<uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+
+<!--for solid-->
+<uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
+
+*/
 
 namespace Badge.Plugin
 {
@@ -10,19 +37,13 @@ namespace Badge.Plugin
   /// </summary>
   public class BadgeImplementation : IBadge
   {
-      private const int BadgeNotificationId = int.MinValue;
-
       /// <summary>
       /// Sets the badge.
       /// </summary>
       /// <param name="badgeNumber">The badge number.</param>
-      /// <param name="title">The title. Used only by Android</param>
-      public void SetBadge(int badgeNumber, string title = null)
+      public void SetBadge(int badgeNumber)
       {
-          var notificationManager = getNotificationManager();
-          var notification = createNativeNotification(badgeNumber, title ?? string.Format("{0} new messages", badgeNumber));
-
-          notificationManager.Notify(BadgeNotificationId, notification);
+	      Badges.SetBadge(Application.Context, badgeNumber);
       }
 
       /// <summary>
@@ -30,26 +51,7 @@ namespace Badge.Plugin
       /// </summary>
       public void ClearBadge()
       {
-          var notificationManager = getNotificationManager();
-          notificationManager.Cancel(BadgeNotificationId);
-      }
-
-      private NotificationManager getNotificationManager()
-      {
-          var notificationManager = Application.Context.GetSystemService(Context.NotificationService) as NotificationManager;
-          return notificationManager;
-      }
-
-      private Notification createNativeNotification(int badgeNumber, string title)
-      {
-          var builder = new Notification.Builder(Application.Context)
-              .SetContentTitle(title)
-              .SetTicker(title)
-              .SetNumber(badgeNumber)
-              .SetSmallIcon(Resource.Drawable.IcDialogEmail);
-
-          var nativeNotification = builder.Build();
-          return nativeNotification;
+	      Badges.RemoveBadge(Application.Context);
       }
   }
 }

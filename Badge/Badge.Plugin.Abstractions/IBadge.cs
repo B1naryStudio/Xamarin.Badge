@@ -14,7 +14,6 @@
       /// Sets the badge.
       /// </summary>
       /// <param name="badgeNumber">The badge number.</param>
-      /// <param name="title">The title. Used only by Android</param>
-      void SetBadge(int badgeNumber, string title = null);
+      void SetBadge(int badgeNumber);
   }
 }
