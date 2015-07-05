@@ -24,6 +24,8 @@ namespace Badge.Plugin
 	 * Factory created to provide BadgeProvider implementations depending what launcher is being executed
 	 *
 	 * @author Arturo Gutiérrez Díaz-Guerra
+	 * 
+	 * ported to C# by Alex Rainman
 	 */
 	public class BadgeProviderFactory {
 

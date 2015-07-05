@@ -22,6 +22,8 @@ namespace Badge.Plugin
 	 * Exception to tell the current launcher is not supported by Badges library.
 	 *
 	 * @author Arturo Gutiérrez Díaz-Guerra
+	 * 
+	 * ported to C# by Alex Rainman
 	 */
 	public class BadgesNotSupportedException : Exception {
 

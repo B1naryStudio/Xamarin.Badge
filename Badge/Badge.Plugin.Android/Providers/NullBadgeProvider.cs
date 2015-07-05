@@ -19,9 +19,11 @@ using Java.Lang;
 namespace Badge.Plugin
 {
 	/**
-	 * NullObject implementation for BadgeProvider.
+	 * NullObject implementation for BadgeProvider (not used, replaced by DefaultBadgeProvider).
 	 *
 	 * @author Arturo Gutiérrez Díaz-Guerra
+	 * 
+	 * ported to C# by Alex Rainman
 	 */
 	class NullBadgeProvider : BadgeProvider {
 

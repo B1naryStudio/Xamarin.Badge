@@ -21,6 +21,8 @@ namespace Badge.Plugin
 	 * BadgeProvider implementation to support badges on Sony devices.
 	 *
 	 * @author Arturo Gutiérrez Díaz-Guerra
+	 * 
+	 * ported to C# by Alex Rainman
 	 */
 	class SonyBadgeProvider : BadgeProvider {
 

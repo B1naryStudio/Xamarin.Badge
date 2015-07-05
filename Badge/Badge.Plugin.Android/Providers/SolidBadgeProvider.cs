@@ -5,6 +5,8 @@ namespace Badge.Plugin
 {
 	/**
 	 * @author MajeurAndroid
+	 * 
+	 * ported to C# by Alex Rainman
 	 */
 	class SolidBadgeProvider : BadgeProvider {
 

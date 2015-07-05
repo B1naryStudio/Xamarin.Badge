@@ -5,6 +5,8 @@ namespace Badge.Plugin
 {
 	/**
      * @author Gernot Pansy
+     * 
+     * ported to C# by Alex Rainman
      */
 	class AdwBadgeProvider : BadgeProvider {
 

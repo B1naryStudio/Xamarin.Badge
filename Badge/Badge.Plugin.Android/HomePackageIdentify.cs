@@ -8,6 +8,8 @@ namespace Badge.Plugin
 	 * Helper to identify the package of current home launcher running
 	 *
 	 * Created by Arturo Gutiérrez on 19/12/14.
+	 * 
+	 * ported to C# by Alex Rainman
 	 */
 	public class HomePackageIdentify {
 

@@ -23,6 +23,8 @@ namespace Badge.Plugin
 	 * different launchers.
 	 *
 	 * @author Arturo Gutiérrez Díaz-Guerra
+	 * 
+	 * ported to C# by Alex Rainman
 	 */
 
 	public class BadgeProvider {

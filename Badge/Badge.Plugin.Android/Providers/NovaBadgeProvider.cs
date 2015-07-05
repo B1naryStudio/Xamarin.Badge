@@ -9,6 +9,8 @@ namespace Badge.Plugin
 	 * User: Gernot Pansy
 	 * Date: 2014/11/03
 	 * Time: 7:15
+	 * 
+	 * ported to C# by Alex Rainman
 	 */
 	class NovaBadgeProvider : BadgeProvider {
 

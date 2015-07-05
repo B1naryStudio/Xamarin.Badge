@@ -23,6 +23,8 @@ namespace Badge.Plugin
 	 * BadgeProvider implementation to support badges on Samsung devices (WITH FIXES).
 	 *
 	 * @author Arturo Gutiérrez Díaz-Guerra
+	 * 
+	 * ported to C# and fixed by Alex Rainman
 	 */
 	class SamsungBadgeProvider : BadgeProvider {
 

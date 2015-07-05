@@ -25,6 +25,8 @@ namespace Badge.Plugin
 	 * BadgeProvider implementation to support badges on HTC devices.
 	 *
 	 * @author Arturo Gutiérrez Díaz-Guerra
+	 * 
+	 * ported to C# by Alex Rainman
 	 */
 	class HtcBadgeProvider : BadgeProvider {
 

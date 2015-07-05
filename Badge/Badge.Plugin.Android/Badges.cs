@@ -24,6 +24,8 @@ namespace Badge.Plugin
 	 * Helper to set badge count on current application icon on any supported launchers.
 	 *
 	 * @author Arturo Gutiérrez Díaz-Guerra
+	 * 
+	 * ported to C# by Alex Rainman
 	 */
 	public static class Badges {
 

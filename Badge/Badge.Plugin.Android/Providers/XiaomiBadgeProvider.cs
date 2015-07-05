@@ -7,6 +7,8 @@ namespace Badge.Plugin
 {
 	/**
 	 * @author leolin
+	 * 
+	 * ported to C# by Alex Rainman
 	 */
 	class XiaomiBadgeProvider : BadgeProvider {
 
@@ -18,7 +20,7 @@ namespace Badge.Plugin
 		public override void SetBadge(int count) {
 			try {
 				Class miuiNotificationClass = Class.ForName("android.app.MiuiNotification");
-				Java.Lang.Object miuiNotification = miuiNotificationClass.NewInstance();
+				Object miuiNotification = miuiNotificationClass.NewInstance();
 				Field field = miuiNotification.Class.GetDeclaredField("messageCount");
 				field.Accessible = true;
 				field.Set(miuiNotification, count == 0 ? "" : count.ToString());
