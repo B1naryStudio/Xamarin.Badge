@@ -35,6 +35,9 @@ Now the plugin support these:
 Thanks to:
 
 https://github.com/arturogutierrez/Badges
+
+and
+
 https://github.com/leolin310148/ShortcutBadger
 
 ### API Usage
