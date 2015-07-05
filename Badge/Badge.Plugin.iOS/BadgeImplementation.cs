@@ -24,8 +24,7 @@ namespace Badge.Plugin
       /// Sets the badge.
       /// </summary>
       /// <param name="badgeNumber">The badge number.</param>
-      /// <param name="title">The title. Used only by Android</param>
-      public void SetBadge(int badgeNumber, string title = null)
+      public void SetBadge(int badgeNumber)
       {
           UIApplication.SharedApplication.ApplicationIconBadgeNumber = badgeNumber;
       }
